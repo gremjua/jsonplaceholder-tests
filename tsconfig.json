@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "./tests",
+        "baseUrl": "./src",
         "esModuleInterop": true,
         "jsx": "preserve",
         "lib": ["es2017", "dom", "es2019"],

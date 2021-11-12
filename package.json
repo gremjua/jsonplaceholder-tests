@@ -7,6 +7,7 @@
         "lint": "eslint . --max-warnings=0 --ext .js,.jsx,.ts,.tsx --fix",
         "prettier": "prettier --write .",
         "ts-check": "./node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
+        "pretest": "rm -f jest_html_reporters.html junit.xml",
         "test": "jest"
     },
     "repository": {
@@ -36,6 +37,8 @@
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-sort-keys-fix": "^1.1.2",
         "husky": "^7.0.4",
+        "jest-html-reporters": "^2.1.6",
+        "jest-junit": "^13.0.0",
         "lint-staged": "^11.2.6",
         "prettier": "^2.4.1",
         "ts-jest": "^27.0.7",

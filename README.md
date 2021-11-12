@@ -37,7 +37,11 @@ This framework was developed with NodeJS, Typescript, Jest, and Supertest.
     ```
 
 ## Run Tests Locally
-
+`Dotenv` is used to manage environment variables locally. All you need to do is add a `.env` file at the root of the project and add the environment variable
+```
+BASE_URL=https://jsonplaceholder.typicode.com/
+```
+Then run in the console:
 ```sh
 npm test
 ```

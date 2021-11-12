@@ -1,3 +1,5 @@
+jsonplaceholder-tests / [Exports](modules.md)
+
 # jsonplaceholder-tests
 
 API tests for https://jsonplaceholder.typicode.com/
@@ -40,9 +42,6 @@ After running with `npm test` reports will be generated in the `reports` directo
 
 -   `junit.xml`: JUnit report.
 -   `jest_html_reporters.html`: HTML report.
-
-## Modules
-Go to [docs/modules.md](docs/modules.md) to see a list of the exported modules that can be used for developing tests.
 
 ## CI
 A `static` analysis and a `tests` job are executed in CircleCI for every commit pushed to this repository.

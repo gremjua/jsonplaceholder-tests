@@ -7,7 +7,8 @@
         "lint": "eslint . --max-warnings=0 --ext .js,.jsx,.ts,.tsx --fix",
         "prettier": "prettier --write .",
         "ts-check": "./node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
-        "test": "jest"
+        "test": "jest",
+        "docs": "typedoc --options typedoc.json"
     },
     "repository": {
         "type": "git",

@@ -24,6 +24,8 @@ API tests for https://jsonplaceholder.typicode.com/
 
 ## Development
 
+This framework was developed with NodeJS, Typescript, Jest, and Supertest.
+
 1. Install [NVM](https://github.com/nvm-sh/nvm). Then use NVM to get the supported Node version (v14.16.0) running:
     ```sh
     nvm use
@@ -49,7 +51,7 @@ After running with `npm test` reports will be generated in the `reports` directo
 
 ## Modules
 
-Go to [docs/modules.md](docs/modules.md) to see a list of the exported modules that can be used for developing tests.
+Go to [docs/modules.md](docs/modules.md) to see a list of the exported modules that can be used for developing tests. This documentation is generated with `Typedoc`.
 
 ## CI
 

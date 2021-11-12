@@ -23,7 +23,7 @@ If we change the request library from supertest to another, the response type wo
 
 #### Defined in
 
-request.ts:55
+request.ts:56
 
 ## Functions
 
@@ -56,4 +56,4 @@ Response type according to the current request handler implementation.
 
 #### Defined in
 
-request.ts:15
+request.ts:16

@@ -1,13 +1,17 @@
 import { ResponseType } from 'resources/request';
 
-// Fields through which data can be identified, used on HTTP methods that require a value
+/**
+ * Fields through which data can be identified, used on HTTP methods that require a value
+ */
 export interface Identifiers {
     id: number;
 }
 
-// A resource must contain these fields and methods
-// Data that can be fetched through the resource must be identifiable
-// returntype of request mediator
+/**
+ * Interface that represents the app's resources.
+ * A resource must contain these fields and methods.
+ * ResponseType is the type returned by the network requests handler.
+ */
 export interface Resource<Data> {
     listAll: () => ResponseType;
     get: (by: Identifiers) => ResponseType;

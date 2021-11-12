@@ -3,6 +3,11 @@ import { request, ResponseType } from 'resources/request';
 
 import { Comment } from './types';
 
+/**
+ * Comments client. This is to be used in tests for simplicity.
+ * It implements the Resource interface and uses `Comment` data types.
+ * The return values of each of its methods is defined by the current requests handler.
+ */
 const comments: Resource<Comment> = {
     delete: ({ id }: Identifiers): ResponseType =>
         request({ method: 'DELETE', params: { id }, path: 'comments/{id}' }).catch((error) => {

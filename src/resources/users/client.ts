@@ -3,6 +3,11 @@ import { request, ResponseType } from 'resources/request';
 
 import { User } from './types';
 
+/**
+ * Users client. This is to be used in tests for simplicity.
+ * It implements the Resource interface and uses `User` data types.
+ * The return values of each of its methods is defined by the current requests handler.
+ */
 const users: Resource<User> = {
     delete: ({ id }: Identifiers): ResponseType =>
         request({ method: 'DELETE', params: { id }, path: 'users/{id}' }).catch((error) => {

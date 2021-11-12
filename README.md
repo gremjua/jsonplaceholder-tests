@@ -5,13 +5,13 @@ API tests for https://jsonplaceholder.typicode.com/
 ## Quick Start
 1. Clone this repository:
     ```sh
-    git clone ...
+    git clone https://github.com/gremjua/jsonplaceholder-tests.git
     ```
 1. Run the following Docker command to build the Docker image, run all tests and see results in the console:
     ```sh
     docker run -it $(docker build -q .)
     ```
-    
+
     Run the following command instead if you wish to get an HTML and JUnit report at the end:
     ```sh
     docker run -v $(pwd)/reports:/home/jsonplaceholder-tests/reports -it $(docker build -q .)
@@ -40,3 +40,10 @@ After running with `npm test` reports will be generated in the `reports` directo
 
 -   `junit.xml`: JUnit report.
 -   `jest_html_reporters.html`: HTML report.
+
+## CI
+A `static` analysis and a `tests` job are executed in CircleCI for every commit pushed to this repository.
+Test reports are stored as artifacts for every execution of the `tests` job.
+
+## Next Steps
+The base is done, so we would need to continue adding more coverage, then negative scenarios. We could also try some contract testing.

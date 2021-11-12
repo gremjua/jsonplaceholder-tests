@@ -2,7 +2,16 @@ import request from 'supertest';
 
 import { Routes, RequestParams, Params } from 'resources/Routes';
 
-// mediator, we can change how we execute requests
+/**
+ * Implementation of the network requests handler.
+ *
+ * @summary The request handler is a mediator for how resource clients make network requests.
+ * It could change to use a different library. It is currently using `supertest`.
+ * @param {Routes[T]['methods']} method - allowed HTTP method for the given path defined in `Routes`.
+ * @param {T extends keyof Routes} path - endpoint to which a request is being made, defined in `Routes`.
+ * @param {Routes[T]['params'] | undefined} params - possible query parameters, id to add to the endpoint, or payload.
+ * @return {Promise<request.Response>} Response type according to the current request handler implementation.
+ */
 const req = async <T extends keyof Routes>({
     method,
     path,
@@ -39,6 +48,8 @@ const req = async <T extends keyof Routes>({
 
 export { req as request };
 
-// Define here the response type.
-// If we change the request library from supertest to another, the response type would be updated here automatically
+/**
+ * Define here the response type.
+ * If we change the request library from supertest to another, the response type would be updated here automatically
+ */
 export type ResponseType = ReturnType<typeof req>;

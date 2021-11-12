@@ -2,13 +2,18 @@ import { Comment } from 'resources/comments/types';
 import { Post } from 'resources/posts/types';
 import { User } from 'resources/users/types';
 
-// common params used
+/**
+ * Common parameters used for network requests.
+ */
 export type Params<T> = {
     query?: Partial<T>;
     payload?: Partial<T>;
     id?: number;
 };
 
+/**
+ * Endpoints, their allowed methods, and parameters.
+ */
 export type Routes = {
     users: {
         methods: 'GET' | 'POST';
@@ -44,6 +49,9 @@ export type Routes = {
     };
 };
 
+/**
+ * Request parameters.
+ */
 export type RequestParams<T extends keyof Routes> = {
     method: Routes[T]['methods'];
     path: T;

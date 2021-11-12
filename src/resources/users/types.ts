@@ -17,6 +17,9 @@ type Company = {
     bs: string;
 };
 
+/**
+ * User data type, used by the users resource.
+ */
 export type User = {
     id: number;
     name: string;

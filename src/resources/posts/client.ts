@@ -3,6 +3,11 @@ import { request, ResponseType } from 'resources/request';
 
 import { Post } from './types';
 
+/**
+ * Posts client. This is to be used in tests for simplicity.
+ * It implements the Resource interface and uses `Post` data types.
+ * The return values of each of its methods is defined by the current requests handler.
+ */
 const posts: Resource<Post> = {
     delete: ({ id }: Identifiers): ResponseType =>
         request({ method: 'DELETE', params: { id }, path: 'posts/{id}' }).catch((error) => {

@@ -7,9 +7,10 @@ import { Routes, RequestParams, Params } from 'resources/Routes';
  *
  * @summary The request handler is a mediator for how resource clients make network requests.
  * It could change to use a different library. It is currently using `supertest`.
- * @param {Routes[T]['methods']} method - allowed HTTP method for the given path defined in `Routes`.
- * @param {T extends keyof Routes} path - endpoint to which a request is being made, defined in `Routes`.
- * @param {Routes[T]['params'] | undefined} params - possible query parameters, id to add to the endpoint, or payload.
+ * @param {Object} requestParams - request parameters used in network requests.
+ * @param {string} requestParams.method - allowed HTTP method for the given path defined in `Routes`.
+ * @param {string} requestParams.path - endpoint to which a request is being made, defined in `Routes`.
+ * @param {Object | undefined} requestParams.params - possible query parameters, id to add to the endpoint, or payload.
  * @return {Promise<request.Response>} Response type according to the current request handler implementation.
  */
 const req = async <T extends keyof Routes>({

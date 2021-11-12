@@ -16,9 +16,9 @@ jobs:
                   environment:
                       BASE_URL: 'https://jsonplaceholder.typicode.com/'
             - store_artifacts:
-                  path: jest_html_reporters.html
+                  path: reports/jest_html_reporters.html
             - store_test_results:
-                  path: junit.xml
+                  path: reports/junit.xml
 
     static:
         executor:

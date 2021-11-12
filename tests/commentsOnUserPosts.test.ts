@@ -34,4 +34,9 @@ describe('comments on users posts', () => {
             throw new Error(`Failed validating comments from each post: ${error as string}`);
         });
     });
+
+    // Things that can go wrong:
+    // - user made no posts
+    // - a post has no comments
+    // These are added in separate test suites newPost, newUser
 });

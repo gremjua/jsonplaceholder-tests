@@ -8,7 +8,8 @@
         "prettier": "prettier --write .",
         "ts-check": "./node_modules/typescript/bin/tsc --noEmit -p tsconfig.json",
         "test": "jest",
-        "docs": "typedoc --options typedoc.json"
+        "docs": "typedoc --options typedoc.json",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",

@@ -10,5 +10,4 @@ workflows:
           # This is the node version to use for the `cimg/node` tag
           version: '14.16.0'
           pkg-manager: npm
-          environment:
-            BASE_URL: 'https://jsonplaceholder.typicode.com/'
+          
